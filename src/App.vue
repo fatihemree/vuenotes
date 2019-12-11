@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <date-picker
+        v-model="zaman"
+        format="hh:mm a"
+        value-type="format"
+        type="time"
+        placeholder="hh:mm a"
+      ></date-picker>
+      <div class="row mt-3">
+        <card
+          :cardData="item"
+          v-for="item in cardData"
+          :key="item.id"
+          class="col-4"
+        ></card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import card from "@/components/card";
+import cardData from "@/assets/data/card.json";
+
+import DatePicker from "vue2-datepicker";
+import "vue2-datepicker/index.css";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    card,
+    DatePicker
+  },
+  data() {
+    return {
+      cardData,
+      zaman: null
+    };
   }
-}
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>

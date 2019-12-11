@@ -1,0 +1,37 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: google-sans;
+    src: url(../font/GoogleSans-Regular.ttf);
+
+}
+
+@font-face {
+    font-family: google-sans;
+    src: url(../font/GoogleSans-Medium.ttf);
+    font-weight: Medium;
+
+}
+
+@font-face {
+    font-family: google-sans;
+    src: url(../font/GoogleSans-Bold.ttf);
+    font-weight: Bold;
+
+}
+
+.googleFont {
+    font-family: google-sans;
+}
+
+.googleFont-m {
+    font-family: google-sans;
+    font-weight: Medium;
+
+}
+
+.googleFont-b {
+    font-family: google-sans;
+    font-weight: Bold;
+
+}
